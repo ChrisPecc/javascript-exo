@@ -15,4 +15,17 @@
 
     // your code here
 
+    var datecheck = new Date();
+    var hour = datecheck.getHours();
+    var min = datecheck.getMinutes();
+
+    if (hour<17 || hour==17  && min<=30) {
+        document.getElementById("target").innerHTML = "Hello!";
+    }
+
+    else {
+        document.getElementById("target").innerHTML = "Good evening!";
+    }
+
+
 })();

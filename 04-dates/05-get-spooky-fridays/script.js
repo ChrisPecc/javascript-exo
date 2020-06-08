@@ -13,4 +13,14 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function() {
+        var selectedyear = document.getElementById("year").value;
+        
+        for (month=0; month<=11; month++) {
+            var date = new Date(selectedyear, month, 13);
+            if(date.getDay()==5){
+                alert(date.toLocaleString('en-us', {  month: 'long' }));
+            }
+        }
+    });
 })();

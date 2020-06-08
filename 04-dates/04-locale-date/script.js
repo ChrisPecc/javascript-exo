@@ -15,4 +15,15 @@
 
     // your code here
 
+    var datecheck = new Date();
+    var year = datecheck.getFullYear();
+    var month = datecheck.toLocaleString('en-us', {  month: 'long' });
+    var day = datecheck.getDate();
+    var wday = datecheck.toLocaleString('en-us', {  weekday: 'long' });
+    var hour = datecheck.getHours();
+    var min = datecheck.getMinutes();
+    
+
+    document.getElementById("target").innerHTML = wday +" "+ day + " " + month + " " +year+ " " +hour + "h"+ min;
+
 })();
