@@ -16,7 +16,12 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
+        var string = document.getElementById("numbers").value;
+        var numarray = string.split(", ");
+        var arraysorted = numarray.sort(function(a, b){return a-b});
+        for (i = 0; i < arraysorted.length; i++){
+            alert(arraysorted[i]);
+        }
     });
 
 })();

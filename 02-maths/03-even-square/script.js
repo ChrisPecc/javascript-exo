@@ -14,6 +14,15 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        var i = 1;
+        var result = i*i;
+        do{
+            alert(i+ "*" +i+"="+result);
+            i++;
+            result = i*i
+        }
+        while(result<=21)
+
 
     });
 
