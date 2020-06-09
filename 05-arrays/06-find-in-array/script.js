@@ -91,4 +91,12 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function() {
+
+        var found = people.find(element => element.firstname == "Jean" && element.lastname =="Dupont");
+        console.log(found.email);
+        console.log(people.indexOf(found))
+        
+    });
+
 })();

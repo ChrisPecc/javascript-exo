@@ -28,4 +28,15 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function() {
+
+        if(fruits.includes("apple")==true){
+            console.log("apple appears in the array.");
+        }
+        else {
+            console.log("apple doesn't appear in the array");
+        }
+        
+    });
+
 })();

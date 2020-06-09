@@ -91,4 +91,24 @@
 
     // your code here
 
+    
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        
+        
+        // for(i=0; i<newpeople.length; i++){
+        //     if(newpeople[i].age < 18){
+        //         newpeople.splice(i, 1);
+        //     }
+        // }
+        // ------------------ "fonctionnait", mais si deux éléments à éliminer se suivaient, le second n'était pas vérifié à cause du changement d'index.
+
+        var newpeople = people.filter(element => element.age >=18);
+
+        console.log(newpeople);
+        
+    });
+    
+
 })();
