@@ -91,4 +91,10 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function() {
+        
+        var reducer = Object.values(people).reduce((t, {age}) => t + age, 0);
+        console.log(reducer);
+    });
+
 })();

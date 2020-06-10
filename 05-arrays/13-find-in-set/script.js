@@ -23,4 +23,13 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+
+        var length= people.size;
+
+        var alex = people.has("Alexandre");
+
+        alert("Il y a "+length+" éléments dans ce set.\nLa valeur Alexandre s'y trouve: "+alex)
+    });
+
 })();

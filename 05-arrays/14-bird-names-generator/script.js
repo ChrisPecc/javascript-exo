@@ -39,4 +39,38 @@
     ]);
 
     // your code here
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        const randombird = birds[Math.floor(Math.random() * birds.length)];
+
+        var adjarr = Array.from(adjectives);
+
+        const randomadj = adjarr[Math.floor(Math.random() * adjarr.length)];
+
+        if(randombird.fem==true){
+
+            if(randomadj=="petit" || randomadj=="grand"){
+                document.getElementById("target").innerHTML = "La "+randomadj+"e "+randombird.name
+            }
+
+            else {
+                document.getElementById("target").innerHTML = "La "+randombird.name+" "+randomadj+"e";
+            }
+        }
+
+        else {
+            
+            if(randomadj=="petit" || randomadj=="grand"){
+                document.getElementById("target").innerHTML = "Le "+randomadj+" "+randombird.name;
+            }
+
+            else {
+                document.getElementById("target").innerHTML = "Le "+randombird.name+" "+randomadj;
+            }
+        }
+    });
+
+
+
 })();

@@ -27,4 +27,26 @@
         user: null,
     };
     // your code here
+
+    document.getElementById("run").addEventListener("click", function() {
+        
+        for(i=0; i<computers.length; i++){
+            if (computers[i].available==null){
+                computers[i].available = defaultProps.available;
+            }
+
+            if (computers[i].os==null){
+                computers[i].os = defaultProps.os;
+            }
+
+            if (computers[i].user==null){
+                computers[i].user = defaultProps.user;
+            }
+        }
+
+        
+        console.log(computers);
+        
+
+    });
 })();

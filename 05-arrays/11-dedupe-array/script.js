@@ -29,5 +29,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        var unique = Array.from(new Set(fruits));
+
+        console.log(unique);
+
+    });
 
 })();
