@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    var text= document.getElementById("target").innerHTML;
+    var result ="";
+
+    for (i=0; i < text.length; i++) {
+        var letter = text.charAt(i);
+        
+        
+    }
 
 })();

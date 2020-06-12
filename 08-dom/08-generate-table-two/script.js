@@ -13,4 +13,18 @@
 
     // your code here
 
+    var table = document.createElement("table");
+    var target = document.getElementById("target");
+    target.appendChild(table);
+
+    for(i=1; i<11; i++){
+        var row = table.insertRow();
+        for(j=1; j<11; j++){
+            var cell = row.insertCell();
+            cell.innerHTML = i * j;
+        }
+        
+    }
+
+
 })();

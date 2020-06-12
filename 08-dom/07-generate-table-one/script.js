@@ -14,13 +14,15 @@
     // your code here;
 
     var table = document.createElement("table");
+    var target = document.getElementById("target");
+    target.appendChild(table);
 
-    table.setAttribute("id", "tableau");
+    for(i=0; i<10; i++){
+        var row = table.insertRow();
+        var cell = row.insertCell();
+    }
 
-    var row = table.insertRow(0);
-    var cell = row.insertCell;
 
-    document.getElementById("target").innerHTML = table;
     
 
 })();
