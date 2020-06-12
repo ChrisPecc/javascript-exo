@@ -38,6 +38,5 @@
         person1.fullname = "Jimmy Page";
 
         console.log(person1);
-    
     });
 })();

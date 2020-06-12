@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    var hover = document.getElementsByTagName("img")[0].getAttribute("data-hover");
+    console.log(hover);
+    var original = document.getElementsByTagName("img")[0].src
+
+    document.getElementsByTagName("img")[0].addEventListener("mouseover", function(){
+        document.getElementsByTagName("img")[0].src = hover;
+    });
+
+    document.getElementsByTagName("img")[0].addEventListener("mouseout", function(){
+        document.getElementsByTagName("img")[0].src = original;
+    });
 
 })();

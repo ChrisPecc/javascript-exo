@@ -20,5 +20,16 @@
     ];
 
     // your code here
+    var i=1;
+
+    document.getElementById("next").addEventListener("click", function() {
+        
+        document.getElementsByTagName("img")[0].src= gallery[i];
+        i++
+        if(i==gallery.length) {
+            i=0;
+        }
+  
+    });
 
 })();

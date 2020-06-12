@@ -13,4 +13,19 @@
 
     // your code here
 
+    
+    document.getElementById("run").addEventListener("click", function() {
+        var passone = document.getElementById("pass-one").value;
+        var passtwo = document.getElementById("pass-two").value;
+
+        if(passone === passtwo){
+            alert("You may enter");
+        }
+
+        else {
+            document.getElementById("pass-one").style.borderColor="#FF0000";
+            document.getElementById("pass-two").style.borderColor="#FF0000";
+        }
+
+    });
 })();

@@ -12,5 +12,10 @@
 (function() {
 
     // your code here
+    var img = document.getElementById("source").getAttribute("data-image");
+    console.log(img);
 
+    document.getElementById("target").innerHTML = "<img src=\""+img+"\">";
+    var span = document.getElementById("source");
+    span.parentNode.removeChild(span); 
 })();

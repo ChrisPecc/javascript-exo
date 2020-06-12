@@ -13,4 +13,10 @@
 
     // your code here
 
+    var x = document.querySelectorAll("p.target");
+
+    for(i=0; i<x.length; i++){
+        x[i].innerHTML = "owned";
+    }
+
 })();

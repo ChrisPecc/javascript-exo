@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    // your code here;
+
+    var table = document.createElement("table");
+
+    table.setAttribute("id", "tableau");
+
+    var row = table.insertRow(0);
+    var cell = row.insertCell;
+
+    document.getElementById("target").innerHTML = table;
+    
 
 })();
