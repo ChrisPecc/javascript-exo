@@ -14,7 +14,7 @@
     // your code here
 
     do {
-        var age = prompt("Quel est ton age?")
+        var age = prompt("How old are you?")
         var gender = prompt("Are you male or female?")
         var town = prompt ("In which town do you live?")
         var correct = prompt("Your age is "+ age +".\nYou are a " + gender +".\nYou live in " + town +". \nIs that correct? (answer by yes or no)")

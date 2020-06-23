@@ -18,12 +18,21 @@
         // your code here
         var input = Number(document.getElementById("number").value);
         var fact = 1;
-        for(i=1; i<=input; i++){
-            fact = fact*i;
+
+        if(input>0){
+            for(i=1; i<=input; i++){
+                fact = fact*i;
+            }
+            alert(fact);
         }
-        alert(fact);
         
+        if(input==0){
+            alert("1")
+        }
         
+        if(input<1){
+            alert("Error. You can't factorialise negative numbers")
+        }
 
     });
 
