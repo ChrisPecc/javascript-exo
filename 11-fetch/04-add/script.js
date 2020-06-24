@@ -11,4 +11,34 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        fetch("http://localhost:3000/heroes")
+        .then(response => response.json())
+        .then(
+            xmen => {
+                let name = document.getElementById("hero-name").value;
+                let alterego = document.getElementById("hero-alter-ego").value;
+                let inputpowers = document.getElementById("hero-powers").value; 
+                let powers = inputpowers.split(", ");
+
+                let newxmen = {
+                id : xmen.length +1,
+                name : name,
+                alterEgo : alterego,
+                abilities : powers,
+                }
+
+                console.log(newxmen)
+
+                xmen.push(newxmen);
+
+                console.table (xmen)
+
+
+            }
+            
+
+        )
+        
+    });
 })();

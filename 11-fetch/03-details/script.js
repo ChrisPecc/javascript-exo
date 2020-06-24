@@ -11,4 +11,45 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        fetch("http://localhost:3000/heroes")
+        .then(response => response.json())
+        .then(xmen => {
+                let template, item, a;
+                template = document.getElementById("tpl-hero");
+                item = template.content.querySelector("li");
+                
+                let idinput = document.getElementById("hero-id").value;
+                console.log(idinput)
+
+                let i = idinput-1;
+                a = document.importNode(item, true);
+
+                if (i >= xmen.length){
+                    a.querySelector("strong").textContent += "not that many X-men in the list";
+                    a.querySelector("em").textContent += "undefined"
+                    a.querySelector("p").textContent += "undefined"
+
+                    document.getElementById("target").appendChild(a);
+                }
+
+                else {
+                    console.log(xmen[i])
+                    
+                    a.querySelector("strong").textContent += xmen[i].name;
+                    a.querySelector("em").textContent += xmen[i].alterEgo;
+                    a.querySelector("p").textContent += xmen[i].abilities.join(", ");
+
+                    document.getElementById("target").appendChild(a);
+                }
+                
+                
+            }
+        )
+        
+        
+
+
+    });
 })();

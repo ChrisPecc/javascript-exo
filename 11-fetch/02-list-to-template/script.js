@@ -14,19 +14,17 @@
     document.getElementById("run").addEventListener("click", () => {
         fetch("http://localhost:3000/heroes")
         .then(response => response.json())
-        .then(xmen => original5 = Array.from(xmen))
-        .then(
-            
-            function putxmen(){
+        .then(xmen => {
                 var template, item, a;
                 template = document.getElementById("tpl-hero");
                 item = template.content.querySelector("li");
-                for (i=0; i < original5.length; i++) {
-                    console.log(original5[i])
+                for (i=0; i < xmen.length; i++) {
+                    console.log(xmen[i])
                     a = document.importNode(item, true);
-                    a.querySelector("strong").textContent += original5[i].name;
-                    a.querySelector("em").textContent += original5[i].alterEgo;
-                    a.querySelector("p").textContent += original5[i].abilities;
+
+                    a.querySelector("strong").textContent += xmen[i].name;
+                    a.querySelector("em").textContent += xmen[i].alterEgo;
+                    a.querySelector("p").textContent += xmen[i].abilities.join(", ");
 
                     document.getElementById("target").appendChild(a);
                 }
