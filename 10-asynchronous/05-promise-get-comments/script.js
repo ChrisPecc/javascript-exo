@@ -16,9 +16,11 @@
         window.lib.getPosts()
             .then(function(array){
                 array.forEach(element => {
-                    window.lib.getComments(element.id).then((commentaires) => {
-                        element.comments = commentaires;
-                    })
+                    window.lib.getComments(element.id)
+                    .then((commentaires) => {
+                            element.comments = commentaires;
+                        }
+                    )
                 });
 
                 console.log(array);

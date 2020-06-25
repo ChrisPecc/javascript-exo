@@ -13,7 +13,7 @@
     // your code here
     function callback(error, person){
         if(error !== null){
-            console.error("There is an error");
+            console.error("There is an error " + error);
         }
         else {
             console.log(person);

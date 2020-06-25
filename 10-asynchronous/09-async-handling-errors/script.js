@@ -13,13 +13,14 @@
     // your code here
     document.getElementById("run").addEventListener("click", () => {
         async function asyncfunc() {
+            let person;
             try {
-                let person = await window.lib.getPersons();
-                console.log(person);
+                person = await window.lib.getPersons();
             }
             catch(error){
-                console.error("A wanted error");
+                console.error(error);
             }
+            console.log(person);
         }
         
         asyncfunc();

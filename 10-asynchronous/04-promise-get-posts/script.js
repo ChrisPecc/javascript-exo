@@ -15,9 +15,11 @@
 
     document.getElementById("run").addEventListener("click", () => {
         window.lib.getPosts()
-            .then(function(array){
-                console.log(array);
-            })
+            .then(
+                function(array){
+                    console.log(array);
+                }
+            )
         
                       
 

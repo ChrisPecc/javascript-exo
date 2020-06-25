@@ -23,7 +23,7 @@
                 let i = idinput-1;
 
                 if (i >= xmen.length){
-                    console.log("Not that much X-Men in the list")
+                    console.error("Not that much X-Men in the list")
                 }
 
                 else {
