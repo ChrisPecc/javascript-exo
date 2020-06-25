@@ -16,14 +16,18 @@
         fetch("http://localhost:3000/heroes")
         .then(response => response.json())
         .then(xmen => {
+                console.table(xmen);
                 let template, item, a;
                 template = document.getElementById("tpl-hero");
                 item = template.content.querySelector("li");
                 
                 let idinput = document.getElementById("hero-id").value;
-                console.log(idinput)
+                
 
-                let i = idinput-1;
+                let research = xmen.find(element => element.id == idinput);
+                let i = xmen.indexOf(research);
+                
+                
                 a = document.importNode(item, true);
 
                 if (i >= xmen.length){

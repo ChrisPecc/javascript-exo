@@ -20,9 +20,15 @@
                 let alterego = document.getElementById("hero-alter-ego").value;
                 let inputpowers = document.getElementById("hero-powers").value; 
                 let powers = inputpowers.split(", ");
+                
+                let i = xmen.length -1;
+                console.log(i);
+                let newid = xmen[i].id +1;
+                console.log(newid);
+                
 
                 let newxmen = {
-                id : xmen.length +1,
+                id : newid,
                 name : name,
                 alterEgo : alterego,
                 abilities : powers,
